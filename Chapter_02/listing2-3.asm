@@ -71,7 +71,7 @@ maxLen  =       256
         mov rdx, intValue
         not rdx
         add rdx, 1
-        and rdx, 0ffh   ; Only keep LO 8 bits, only al filled
+        and rdx, 0ffh   ; Only keep LO 8 bits, only dl filled
         lea rcx, fmtStr3
         call printf
 
