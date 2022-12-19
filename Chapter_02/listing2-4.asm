@@ -126,6 +126,11 @@ maxLen      =       256
         ; Pac the date into the following bits
         ; 15  14  13  12  11  10  9  8  7  6  5  4  3  2  1  0
         ; m   m   m   m   d   d   d  d  d  y  y  y  y  y  y  y
+        ; 12 months, the max number in binary   = 1100
+        ; 31 days, the max number in binary     = 0001 1111
+        ; 99 years, the max number in binary    = 0110 0011
+        ; We are just working with words, 2 bytes
+
         movzx ax, month
         shl ax, 5
         or al, day
